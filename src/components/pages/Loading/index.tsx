@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Home() {
+export default function Loading() {
   return (
     <View style={styles.container}>
       <Text>Loading</Text>

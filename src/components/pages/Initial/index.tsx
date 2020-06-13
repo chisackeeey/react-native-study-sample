@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Home() {
+export default function Initial() {
   return (
     <View style={styles.container}>
       <Text>Initial</Text>
