@@ -1,11 +1,9 @@
 import React from 'react';
 import { createStackNavigator, StackCardInterpolationProps } from '@react-navigation/stack';
-import * as UiContext from '../../contexts/ui';
+
 import { CHOOSE_LOGIN, HOME, LOADING, INITIAL } from '../../constants/path';
-import Loading from '../../components/pages/Loading/index';
-import ChooseLogin from '../../components/pages/ChooseLogin/index';
-import Home from '../../components/pages/Home/index';
-import Initial from '../../components/pages/Initial/index';
+import { Initial, Loading, Home, ChooseLogin } from '../../components/pages';
+import * as UiContext from '../../contexts/ui';
 
 const Stack = createStackNavigator();
 const forFade = ({ current }: StackCardInterpolationProps) => ({
