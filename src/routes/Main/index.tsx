@@ -1,9 +1,14 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, StackCardInterpolationProps } from '@react-navigation/stack';
 import * as UiContext from '../../contexts/ui';
 import { CHOOSE_LOGIN, HOME } from '../../constants/path';
 
 const Stack = createStackNavigator();
+const forFade = ({ current }: StackCardInterpolationProps) => ({
+  cardStayle: {
+    opacity: current.progress,
+  },
+});
 
 function switchingAuthStatus(status: UiContext.Status) {
   switch (status) {
@@ -16,3 +21,10 @@ function switchingAuthStatus(status: UiContext.Status) {
       return <Stack.Screen name={HOME} component={HOME} />;
   }
 }
+
+function AuthWithRoutes() {
+  const uiContext = React.useContext(UiContext.Context);
+  return <Stack.Navigator></Stack.Navigator>;
+}
+
+export default AuthWithRoutes;
