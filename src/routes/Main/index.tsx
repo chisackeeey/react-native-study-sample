@@ -3,9 +3,11 @@ import { createStackNavigator, StackCardInterpolationProps } from '@react-naviga
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { CHOOSE_LOGIN, HOME, LOADING, INITIAL, STATISTICS } from '../../constants/path';
-import { Initial, Loading, Home, ChooseLogin } from '../../components/pages';
+import { Initial, Loading, ChooseLogin } from '../../components/pages';
+import Home from './Home';
+import Statistics from './Statistics';
+
 import * as UiContext from '../../contexts/ui';
-import Statistics from '../../components/pages/Statistics/index';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
