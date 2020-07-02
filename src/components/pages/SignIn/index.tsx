@@ -15,7 +15,6 @@ export default function Detail() {
   const { setApplicationState } = React.useContext(Context);
   return (
     <View style={styles.container}>
-      <Text>Sign In</Text>
       <TouchableOpacity onPress={() => setApplicationState(Status.AUTHORIZED)}>
         <Text>Sign In</Text>
       </TouchableOpacity>
